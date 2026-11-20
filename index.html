@@ -1,0 +1,254 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><title>산후조리원 입점 후보 TOP 8 (광진구 능동·화양동·자양동) · 작성자 조우석 팀장</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+@page{size:A4;margin:11mm 10mm}
+*{box-sizing:border-box}body{font-family:'Pretendard','Malgun Gothic','Apple SD Gothic Neo',sans-serif;color:#1d2433;margin:0;background:#f3f4f7;font-size:12.5px;line-height:1.5}
+.wrap{max-width:900px;margin:0 auto;padding:22px}
+header{background:#13213c;color:#fff;border-radius:12px;padding:22px 26px;position:relative}
+header h1{margin:0 0 6px;font-size:22px}header p{margin:2px 0;color:#c9d3e8}
+.pbtn{position:absolute;right:20px;top:20px;background:#e8b04a;color:#13213c;border:0;border-radius:8px;padding:8px 16px;font-weight:700;cursor:pointer;font-size:13px}
+h2{font-size:16px;margin:22px 0 10px;border-left:4px solid #e8b04a;padding-left:10px}
+.box{background:#fff;border-radius:10px;padding:14px 18px;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.cond{display:grid;grid-template-columns:1fr 1fr;gap:4px 20px}.cond div b{color:#13213c}
+table{border-collapse:collapse;width:100%}
+.bench td,.bench th,.alt td,.alt th,.sumt td,.sumt th{border-bottom:1px solid #e6e8ee;padding:4px 6px;text-align:left;font-size:11.5px;vertical-align:top}
+.bench th,.alt th,.sumt th{background:#f0f2f6}
+.alt a{color:#1a5fb4;text-decoration:none}
+#map{height:560px;border-radius:10px}
+.card{background:#fff;border-radius:12px;padding:16px 18px;margin:14px 0;box-shadow:0 1px 4px rgba(0,0,0,.07);break-inside:avoid;page-break-inside:avoid}
+.ch{display:flex;gap:12px;align-items:center;margin-bottom:10px}.rk{flex:0 0 38px;height:38px;border-radius:50%;background:#13213c;color:#e8b04a;font-weight:800;font-size:18px;display:flex;align-items:center;justify-content:center}
+.ch h3{margin:0;font-size:15.5px}.sub{color:#5b6475;font-size:11.5px}
+.spec th{background:#f5f6f9;color:#4a5263;font-weight:600;width:16%;padding:5px 7px;border:1px solid #e6e8ee;font-size:11.5px}.spec td{padding:5px 7px;border:1px solid #e6e8ee;width:34%}
+.spec tr.nego th{background:#fff4dc}.spec tr.nego td{background:#fffaf0}
+.tag{font-size:10px;padding:1px 6px;border-radius:8px;font-weight:700;white-space:nowrap}.tag.new{background:#e2f4e8;color:#1b7a3d}.tag.mid{background:#eef1f6;color:#4a5263}.tag.warn{background:#fdeaea;color:#b42318}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px}.two h4{margin:4px 0;font-size:12.5px;color:#13213c}.two ul{margin:0;padding-left:17px}.two li{margin:2px 0}
+ul.risk li::marker{color:#c0392b}
+.bk{margin-top:8px;background:#f5f6f9;border-radius:8px;padding:7px 10px;font-size:11.5px}.bk a{color:#1a5fb4;text-decoration:none}.oth{color:#5b6475}
+.note li{margin:3px 0}
+.pb{break-before:page;page-break-before:always}
+@media print{.wrap{zoom:.8}body{background:#fff}.pbtn{display:none}.wrap{padding:0}.card,.box{box-shadow:none;border:1px solid #e1e4ea}header{-webkit-print-color-adjust:exact;print-color-adjust:exact}*{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+.leaflet-tooltip-pane{z-index:550}.leaflet-tooltip{font-size:11px;padding:2px 5px}
+header .author{margin-top:10px;color:#e8b04a;font-size:13px}header .author a{color:#e8b04a;text-decoration:none}.authorline{margin:12px 0 0;font-size:12px}.authorline a{color:#1d2433;text-decoration:none}
+</style></head><body><div class="wrap">
+<header><button class="pbtn" onclick="window.print()">인쇄</button>
+<h1>산후조리원 입점 후보 TOP 8 (광진구 능동·화양동·자양동)</h1>
+<p>광진구 상가·사무실·통건물 임대 매물</p>
+<p>전용 250평 내외 (한 층 또는 붙은 층·통건물) · 엘리베이터 · 산후조리원 용도(제1종 근생) 가능성 · 병원·공원 접근</p>
+<p class="author">작성자 <b>조우석 팀장</b> &nbsp;|&nbsp; 연락처 <b><a href="tel:010-2508-9369">010-2508-9369</a></b></p></header>
+
+<h2>검색 조건과 방법</h2>
+<div class="box cond">
+<div><b>대상</b> 광진구 상가·사무실·빌딩 임대 매물 (공급 100평 이상)</div>
+<div><b>지역</b> 능동·화양동·자양동 우선, 다른 동은 예비 후보</div>
+<div><b>면적</b> 전용 약 220~260평. 한 층이 없으면 붙은 층(연층)·통건물 합계로 봄</div>
+<div><b>용도</b> 산후조리원은 건축법상 제1종 근린생활시설. 업무시설은 용도변경 허가가 필요해 감점</div>
+<div><b>층 요건</b> 임산부실·영유아실은 1층 원칙, 2층 이상은 대피공간·노대 등을 갖추면 가능 (모자보건법 시행규칙 별표3)</div>
+<div><b>가점</b> 엘리베이터, 발코니·테라스, 채광, 주차, 신축, 병원·공원 접근, 렌트프리 언급</div>
+<div><b>상권 평가</b> 반경 1.5km 아파트 세대수·매매가, 기존 산후조리원 거리</div>
+<div><b>규모</b> 수집 319건 → 3개 동 75건 + 다른 동 32건 상세 검토 → 건물 13곳</div>
+</div>
+
+<h2>한눈에 보기</h2>
+<div class="box"><table class="sumt"><tr><th>#</th><th>후보</th><th>층 / 전용</th><th>보증금 / 월세</th><th>전용평당</th><th>건축물 용도</th><th>가까운 역</th></tr><tr><td>1</td><td>자양동 K&amp;S빌딩 7~9층 연층 (구의역 400m)</td><td>7~9층 / 225평</td><td>3억 / 1,800만</td><td>8.0만</td><td>제1종 근린생활시설</td><td>구의역 390m</td></tr><tr><td>2</td><td>화양동 KCC파크타운 2층 한 층 255평 (어린이대공원역)</td><td>2층 / 255평</td><td>3억 / 2,300만</td><td>9.0만</td><td>제2종 근린생활시설</td><td>어린이대공원역 160m</td></tr><tr><td>3</td><td>능동 범천타워 6~7층 연층 (군자역 200m, 주차 89대)</td><td>6~7층 / 225평</td><td>2억 / 2,000만</td><td>8.9만</td><td>업무시설</td><td>군자역 200m</td></tr><tr><td>4</td><td>능동 청화빌딩 2~4층 통임대 (아차산역 300m)</td><td>2~4층 / 221평</td><td>3.5억 / 1,600만</td><td>7.2만</td><td>제2종 근린생활시설</td><td>아차산역 290m</td></tr><tr><td>5</td><td>화양동 호연빌딩 신축 (2024) 층마다 테라스</td><td>5~6층  + 추가 층 협의 / 147평+α</td><td>2.64억 / 2,200만</td><td>14.9만</td><td>제1종 근린생활시설</td><td>어린이대공원역 180m</td></tr><tr><td>6</td><td>자양동 제일타워 신축 (성수사거리, 주차 60대)</td><td>2~4층 연층 / 349~465평</td><td>8.1억 / 6,510만</td><td>14.0~18.7만</td><td>업무시설·제2종 근생 혼재 표기</td><td>건대입구역 480m</td></tr><tr><td>7</td><td>능동 군자타워 신축 (2026) 군자역 5번 출구 앞</td><td>2~4층  등 여러 층 조합 / 180평</td><td>5.3억 / 2,970만</td><td>16.5만</td><td>제1종 근린생활시설</td><td>군자역 70m</td></tr><tr><td>8</td><td>건대입구역 1분 4층 통건물 (자양동 7-7)</td><td>지상 1~4층 통임대 / 252평</td><td>3억 / 3,000만</td><td>11.9만</td><td>제2종 근린생활시설</td><td>건대입구역 40m</td></tr></table>
+<p style="margin:8px 0 0;font-size:11.5px;color:#5b6475">250평 안팎을 한 층으로 쓰는 매물은 2번(KCC파크타운 255평) 하나뿐입니다. 나머지는 2~4개 층 연층이나 통건물 조합입니다.</p></div>
+
+<h2>광진구 산후조리원 현황 (벤치마크)</h2>
+<div class="box">
+<p style="margin:0 0 8px">광진구 보건소에 올라 있는 산후조리원은 <b>3곳</b>이고 정원이 9~22명으로 모두 소규모입니다. 3곳 모두 자양동·구의동에 있고 <b>능동·화양동에는 없습니다</b>. 250평급(20실 이상) 대형 조리원도 구 안에 없습니다. 광진구 2025년 출생아는 <b>1,345명</b>으로 전년(1,263명)보다 늘었고, 맞닿은 성동구는 1,898명입니다 (통계청 2025년 출생 통계). 주변 분만 병원은 건국대학교병원(화양동), SC제일산부인과(분만실, 구의동)이고, 혜민병원(종합병원, 자양동)도 가깝습니다.</p>
+<table class="bench"><tr><th>산후조리원</th><th>주소</th><th>정원</th><th>2주 요금 (일반실)</th></tr><tr><td>광진아기맘미소 산후조리원</td><td>뚝섬로 503 (자양동) 3층</td><td>정원 10명</td><td>2주 400만 (특실 530만)</td></tr><tr><td>온 산후조리원</td><td>자양로 192 (구의동)</td><td>정원 22명</td><td>2주 450/490만 (특실 590만)</td></tr><tr><td>예그리나 산후조리원</td><td>구의로 28 (구의동) 동영빌딩 2층</td><td>정원 9명</td><td>2주 530만</td></tr></table>
+<p style="margin:6px 0 0;font-size:11px;color:#5b6475">요금: 광진구 보건소 이용요금 현황 · 정원: 요리조리(지방행정인허가 기반, 2025.12 확인)</p>
+</div>
+
+<h2 class="pb">후보 위치 지도</h2>
+<div class="box"><div id="map"></div><div style="font-size:11px;color:#5b6475;margin-top:6px">남색 번호: TOP 8 · 회색 번호: 예비 후보 · 빨간 점: 기존 산후조리원 · 초록 점: 주요 병원 (건국대병원·혜민병원·SC제일산부인과)</div></div>
+
+<h2 class="pb">TOP 8 후보</h2>
+<section class="card">
+  <div class="ch"><span class="rk">1</span><div><h3>자양동 K&amp;S빌딩 7~9층 연층 (구의역 400m)</h3><div class="sub">광진구 자양동 769-7 · 자양로 131 (구 광진구청 옆 자양로 대로변, 11층)</div></div></div>
+  <table class="spec">
+    <tr><th>층</th><td>7~9층 (3개 층, 층당 약 75평) / 총 11층</td><th>전용 / 공급</th><td><b>225평</b> / 임대 270평</td></tr>
+    <tr><th>보증금 / 월세</th><td><b>3억 / 1,800만</b></td><th>전용평당 월세</th><td>8.0만원 <small>(관리비 480만)</small></td></tr>
+    <tr><th>준공</th><td>2008.09</td><th>건축물 용도</th><td>제1종 근린생활시설 <span class="tag new">산후조리원 용도</span></td></tr>
+    <tr><th>주차 / 엘리베이터</th><td>37대 (건물 전체) / 있음</td><th>가까운 역</th><td>구의역 390m, 강변역 1.2km</td></tr>
+    <tr><th>주요 병원</th><td>혜민병원 0.5km, SC제일산부인과 0.6km</td><th>가까운 산후조리원</th><td>온 산후조리원 0.6km</td></tr>
+    <tr><th>아파트 1.5km</th><td>26,641세대</td><th>평균 매매가</th><td>5,369만원/평</td></tr>
+    <tr class="nego"><th>렌트프리 3~6개월</th><td><b>5,400만 ~ 1.1억원</b></td><th>광고상 협의 조건</th><td>렌트프리 최대 협의 (같은 건물 다른 중개사 설명)</td></tr>
+  </table>
+  <div class="two">
+    <div><h4>추천 이유</h4><ul><li>건축물 용도가 제1종 근생이라 산후조리원(제1종 근생)으로 용도변경 없이 진행 가능</li><li>사면 큰 창으로 채광이 좋고(중개사 설명), 9층 광고에 발코니 공간 언급. 2층 이상 설치 요건(노대·대피공간) 검토에 유리</li><li>혜민병원 0.5km, SC제일산부인과(분만실) 0.6km, 건국대병원 1.0km</li><li>반경 1.5km 2.7만 세대, 평균 매매가 5,370만원/평 (구의현대2단지 1,606, 더샵스타시티 1,177, 롯데캐슬이스트폴 1,063세대 등)</li><li>같은 건물 7~8층 150평(2억 / 1,200만)도 있어 규모 조절 가능</li></ul></div>
+    <div><h4>체크 포인트</h4><ul class="risk"><li>3개 층에 나눠 쓰는 구조라 신생아실·산모실·식당 층별 동선 설계 필요</li><li>온 산후조리원(정원 22명, 자양로 192)과 0.6km</li><li>2008년 준공이라 TI보다 렌트프리·임대료 위주 협상, 관리비 월 480만원 별도</li></ul></div>
+  </div>
+  <div class="bk"><b>중개사</b> 에이치공인중개사사무소 (형원용) · <a href="tel:02-6219-3866">02-6219-3866</a> · <a href="tel:010-9008-3866">010-9008-3866</a>
+   <br><span class="oth">같은 매물 다른 중개사: 크레신타워공인중개사사무소 02-444-5885 · 010-5006-2549 (3억 / 1,800만, 9층 표기) / 9층 150평 연층: 더나비공인중개사사무소 010-8415-4295</span>
+   <br><a href="https://map.kakao.com/link/map/%EC%9E%90%EC%96%91%EB%8F%99%20K%26S%EB%B9%8C%EB%94%A9%207~9%EC%B8%B5%20%EC%97%B0%EC%B8%B5%20(%EA%B5%AC%EC%9D%98%EC%97%AD%20400m),37.5395236,127.0828573" target="_blank">지도</a> · <a href="https://map.kakao.com/link/roadview/37.5395236,127.0828573" target="_blank">로드뷰</a></div>
+</section>
+<section class="card">
+  <div class="ch"><span class="rk">2</span><div><h3>화양동 KCC파크타운 2층 한 층 255평 (어린이대공원역)</h3><div class="sub">광진구 화양동 527 · 광나루로 410 (21층 주상복합)</div></div></div>
+  <table class="spec">
+    <tr><th>층</th><td>2층 / 총 21층</td><th>전용 / 공급</th><td><b>255평</b> / 359평</td></tr>
+    <tr><th>보증금 / 월세</th><td><b>3억 / 2,300만</b></td><th>전용평당 월세</th><td>9.0만원 <small>(관리비 별도)</small></td></tr>
+    <tr><th>준공</th><td>2005.12</td><th>건축물 용도</th><td>제2종 근린생활시설 <span class="tag mid">기재변경</span></td></tr>
+    <tr><th>주차 / 엘리베이터</th><td>표기 없음 (확인) / 표기 없음 (확인)</td><th>가까운 역</th><td>어린이대공원역 160m, 건대입구역 860m</td></tr>
+    <tr><th>주요 병원</th><td>건국대학교병원 0.7km, SC제일산부인과 1.0km</td><th>가까운 산후조리원</th><td>온 산후조리원 0.9km</td></tr>
+    <tr><th>아파트 1.5km</th><td>14,613세대</td><th>평균 매매가</th><td>4,673만원/평</td></tr>
+    <tr class="nego"><th>렌트프리 3~6개월</th><td><b>6,900만 ~ 1.4억원</b></td><th>광고상 협의 조건</th><td>입주 시기·계약 조건 협의 가능 (입주 가능일 2027.01.30)</td></tr>
+  </table>
+  <div class="two">
+    <div><h4>추천 이유</h4><ul><li>이번 검색에서 유일하게 한 층 전용 250평급 (255평). 신생아실·산모실·식당을 한 층에 배치 가능</li><li>어린이대공원역 160m, 어린이대공원 정문 0.3km (산책 동선), 건국대병원 0.7km</li><li>화양동·능동에는 산후조리원이 없음 (가장 가까운 온 산후조리원 0.9km)</li><li>전용평당 9.0만원</li></ul></div>
+    <div><h4>체크 포인트</h4><ul class="risk"><li>같은 주소에 빕스 어린이대공원점 등 외식 매장이 있는 상업시설 2층: 산모 전용 출입·엘리베이터 동선 분리와 소음 확인</li><li>제2종 근생 → 제1종(산후조리원) 대장 기재변경 필요, 2층이라 대피공간·노대 등 설치 요건 확인</li><li>입주 가능일 2027.01.30 (현 임차인 확인), 주차 대수 표기 없음</li></ul></div>
+  </div>
+  <div class="bk"><b>중개사</b> 대공원부동산공인중개사사무소 (윤현로) · <a href="tel:02-463-8955">02-463-8955</a> · <a href="tel:010-6456-9588">010-6456-9588</a>
+   
+   <br><a href="https://map.kakao.com/link/map/%ED%99%94%EC%96%91%EB%8F%99%20KCC%ED%8C%8C%ED%81%AC%ED%83%80%EC%9A%B4%202%EC%B8%B5%20%ED%95%9C%20%EC%B8%B5%20255%ED%8F%89%20(%EC%96%B4%EB%A6%B0%EC%9D%B4%EB%8C%80%EA%B3%B5%EC%9B%90%EC%97%AD),37.5465827,127.0750378" target="_blank">지도</a> · <a href="https://map.kakao.com/link/roadview/37.5465827,127.0750378" target="_blank">로드뷰</a></div>
+</section>
+<section class="card">
+  <div class="ch"><span class="rk">3</span><div><h3>능동 범천타워 6~7층 연층 (군자역 200m, 주차 89대)</h3><div class="sub">광진구 능동 222-3 · 천호대로 572 (14층 업무·오피스텔 복합)</div></div></div>
+  <table class="spec">
+    <tr><th>층</th><td>6~7층 (2개 층, 층당 약 112평) / 총 14층</td><th>전용 / 공급</th><td><b>225평</b> / 임대 427평</td></tr>
+    <tr><th>보증금 / 월세</th><td><b>2억 / 2,000만</b></td><th>전용평당 월세</th><td>8.9만원 <small>(관리비 400만)</small></td></tr>
+    <tr><th>준공</th><td>2010.06</td><th>건축물 용도</th><td>업무시설 (6층 일부 광고는 제2종 근생 표기) <span class="tag warn">용도변경 허가</span></td></tr>
+    <tr><th>주차 / 엘리베이터</th><td>89대 (자주식 무료) / 승객용 2대</td><th>가까운 역</th><td>군자역 200m, 아차산역 840m</td></tr>
+    <tr><th>주요 병원</th><td>SC제일산부인과 1.3km, 건국대학교병원 1.9km</td><th>가까운 산후조리원</th><td>온 산후조리원 1.3km</td></tr>
+    <tr><th>아파트 1.5km</th><td>8,513세대</td><th>평균 매매가</th><td>3,667만원/평</td></tr>
+    <tr class="nego"><th>렌트프리 3~6개월</th><td><b>6,000만 ~ 1.2억원</b></td><th>광고상 협의 조건</th><td>7층 광고에 렌트프리 적극 협의</td></tr>
+  </table>
+  <div class="two">
+    <div><h4>추천 이유</h4><ul><li>층당 약 112평 단독층 2개를 붙여 쓰는 연층 (분할도 가능)</li><li>자주식 무료 주차, 관리인 상근, 채광 좋음 (중개사 설명)</li><li>같은 건물 13~14층도 연층 약 230평 (14층 꼭대기층, 채광·경관 좋음 표기, 층당 1억 / 1,000만)</li><li>군자역 5·7호선 더블역세권</li></ul></div>
+    <div><h4>체크 포인트</h4><ul class="risk"><li>건축물 용도가 업무시설로 표기 → 제1종 근생(산후조리원)으로 바꾸려면 상위 시설군 변경이라 허가가 필요. 구청 건축과에 먼저 확인</li><li>오피스텔과 같이 쓰는 건물이라 관리단 동의·출입 동선 확인</li><li>반경 1.5km 아파트 8,500세대로 적은 편 (단독·다세대 위주)</li></ul></div>
+  </div>
+  <div class="bk"><b>중개사</b> 에이치공인중개사사무소 (형원용) · <a href="tel:02-6219-3866">02-6219-3866</a> · <a href="tel:010-9008-3866">010-9008-3866</a>
+   <br><span class="oth">13~14층 연층: KD공인중개사사무소 02-478-1885 · 010-5473-1885 / 7층: 하늘공인중개사사무소 02-461-6208 · 010-9979-6656 / 6층(제2종 근생 표기): (주)명인리얼티부동산중개법인 02-6959-7254</span>
+   <br><a href="https://map.kakao.com/link/map/%EB%8A%A5%EB%8F%99%20%EB%B2%94%EC%B2%9C%ED%83%80%EC%9B%8C%206~7%EC%B8%B5%20%EC%97%B0%EC%B8%B5%20(%EA%B5%B0%EC%9E%90%EC%97%AD%20200m%2C%20%EC%A3%BC%EC%B0%A8%2089%EB%8C%80),37.5559979,127.0812373" target="_blank">지도</a> · <a href="https://map.kakao.com/link/roadview/37.5559979,127.0812373" target="_blank">로드뷰</a></div>
+</section>
+<section class="card">
+  <div class="ch"><span class="rk">4</span><div><h3>능동 청화빌딩 2~4층 통임대 (아차산역 300m)</h3><div class="sub">광진구 능동 255-16 · 천호대로 628</div></div></div>
+  <table class="spec">
+    <tr><th>층</th><td>2~4층 (3개 층, 층당 약 74평) / 총 5층</td><th>전용 / 공급</th><td><b>221평</b> / 253평</td></tr>
+    <tr><th>보증금 / 월세</th><td><b>3.5억 / 1,600만</b></td><th>전용평당 월세</th><td>7.2만원 <small>(관리비 별도)</small></td></tr>
+    <tr><th>준공</th><td>1989.02</td><th>건축물 용도</th><td>제2종 근린생활시설 <span class="tag mid">기재변경</span></td></tr>
+    <tr><th>주차 / 엘리베이터</th><td>7대 / 있음</td><th>가까운 역</th><td>아차산역 290m, 군자역 750m</td></tr>
+    <tr><th>주요 병원</th><td>SC제일산부인과 1.0km, 건국대학교병원 2.0km</td><th>가까운 산후조리원</th><td>온 산후조리원 1.0km</td></tr>
+    <tr><th>아파트 1.5km</th><td>6,112세대</td><th>평균 매매가</th><td>4,360만원/평</td></tr>
+    <tr class="nego"><th>렌트프리 3~6개월</th><td><b>4,800만 ~ 9,600만원</b></td><th>광고상 협의 조건</th><td>통임대 외 층별 분리 임대 가능, 무권리</td></tr>
+  </table>
+  <div class="two">
+    <div><h4>추천 이유</h4><ul><li>2~4층을 한 번에 통으로 써서 건물 상층부를 단독 사용 (산모 동선 분리 쉬움)</li><li>층별 화장실 단독 사용, 엘리베이터 있음, 무권리</li><li>전용평당 7.2만원으로 TOP 중 가장 저렴해 인테리어 투자 여력이 큼</li></ul></div>
+    <div><h4>체크 포인트</h4><ul class="risk"><li>1989년 준공: 급탕·급수·전기 용량과 엘리베이터 크기(유모차·침대) 확인</li><li>천호대로변이라 차량 소음 → 차음 창호 필요, 주차 7대로 적음</li><li>제2종 근생 → 제1종 대장 기재변경 필요</li></ul></div>
+  </div>
+  <div class="bk"><b>중개사</b> (주)명인리얼티부동산중개법인 (박다영) · <a href="tel:02-6959-7254">02-6959-7254</a> · <a href="tel:010-4148-9512">010-4148-9512</a>
+   
+   <br><a href="https://map.kakao.com/link/map/%EB%8A%A5%EB%8F%99%20%EC%B2%AD%ED%99%94%EB%B9%8C%EB%94%A9%202~4%EC%B8%B5%20%ED%86%B5%EC%9E%84%EB%8C%80%20(%EC%95%84%EC%B0%A8%EC%82%B0%EC%97%AD%20300m),37.5538799,127.0869409" target="_blank">지도</a> · <a href="https://map.kakao.com/link/roadview/37.5538799,127.0869409" target="_blank">로드뷰</a></div>
+</section>
+<section class="card">
+  <div class="ch"><span class="rk">5</span><div><h3>화양동 호연빌딩 신축 (2024) 층마다 테라스</h3><div class="sub">광진구 화양동 111-117 · 능동로 178 (11층, 3면 통창, 어린이대공원역 180m)</div></div></div>
+  <table class="spec">
+    <tr><th>층</th><td>5~6층 (2개 층, 층당 약 73평) + 추가 층 협의 / 총 11층</td><th>전용 / 공급</th><td><b>147평</b> / 180평</td></tr>
+    <tr><th>보증금 / 월세</th><td><b>2.64억 / 2,200만</b></td><th>전용평당 월세</th><td>14.9만원 <small>(관리비 412만)</small></td></tr>
+    <tr><th>준공</th><td>2024.06 <span class="tag new">신축</span></td><th>건축물 용도</th><td>제1종 근린생활시설 (5~6층) <span class="tag new">산후조리원 용도</span></td></tr>
+    <tr><th>주차 / 엘리베이터</th><td>38대 / 현장 확인</td><th>가까운 역</th><td>어린이대공원역 180m, 건대입구역 790m</td></tr>
+    <tr><th>주요 병원</th><td>건국대학교병원 0.7km, SC제일산부인과 1.0km</td><th>가까운 산후조리원</th><td>온 산후조리원 1.0km</td></tr>
+    <tr><th>아파트 1.5km</th><td>15,488세대</td><th>평균 매매가</th><td>4,698만원/평</td></tr>
+    <tr class="nego"><th>렌트프리 3~6개월</th><td><b>6,600만 ~ 1.3억원</b></td><th>광고상 협의 조건</th><td>핏아웃·렌트프리 최대 협의, 추가 면적 임차 가능</td></tr>
+  </table>
+  <div class="two">
+    <div><h4>추천 이유</h4><ul><li>2024년 신축 첫 입주, 3면 통창 + 층마다 테라스 (중개사 설명). 테라스는 2층 이상 설치 요건의 노대 검토에 유리</li><li>5~6층 제1종 근생</li><li>어린이대공원 0.4km, 건국대병원 0.7km</li><li>같은 건물 3층 96평 (1.32~1.6억 / 1,100~1,300만)도 나와 있어 층 조합 여지</li></ul></div>
+    <div><h4>체크 포인트</h4><ul class="risk"><li>층당 약 73평이라 250평이면 3~4개 층 필요. 붙은 층 확보 가능 여부 먼저 확인</li><li>전용평당 14.9만원 + 관리비 412만원으로 임대료 높음</li><li>9~10층은 업무시설 표기</li></ul></div>
+  </div>
+  <div class="bk"><b>중개사</b> 센터원부동산중개 (박상현) · <a href="tel:02-722-1898">02-722-1898</a> · <a href="tel:010-3115-1898">010-3115-1898</a>
+   <br><span class="oth">3층 96평: 위드리얼티 공인중개사사무소 02-786-0365 · 010-7735-0365 / 명품공인중개사사무소 02-2213-1233 · 010-2286-1231 (가격 조정 가능)</span>
+   <br><a href="https://map.kakao.com/link/map/%ED%99%94%EC%96%91%EB%8F%99%20%ED%98%B8%EC%97%B0%EB%B9%8C%EB%94%A9%20%EC%8B%A0%EC%B6%95%20(2024)%20%EC%B8%B5%EB%A7%88%EB%8B%A4%20%ED%85%8C%EB%9D%BC%EC%8A%A4,37.5464113,127.0740359" target="_blank">지도</a> · <a href="https://map.kakao.com/link/roadview/37.5464113,127.0740359" target="_blank">로드뷰</a></div>
+</section>
+<section class="card">
+  <div class="ch"><span class="rk">6</span><div><h3>자양동 제일타워 신축 (성수사거리, 주차 60대)</h3><div class="sub">광진구 자양동 24-11 · 동일로 100 (10층, 건대입구역 480m)</div></div></div>
+  <table class="spec">
+    <tr><th>층</th><td>2~4층 연층 (층별 임대 가능) / 총 10층</td><th>전용 / 공급</th><td><b>전용 349~465평 (광고마다 다름)</b> / 450~619평</td></tr>
+    <tr><th>보증금 / 월세</th><td><b>8.1억 / 6,510만</b></td><th>전용평당 월세</th><td>14.0~18.7만원 <small>(관리비 1,050만)</small></td></tr>
+    <tr><th>준공</th><td>2026.02~05 <span class="tag new">신축</span></td><th>건축물 용도</th><td>업무시설·제2종 근생 혼재 표기 (2층·5층 일부 제1종 근생) <span class="tag mid">확인</span></td></tr>
+    <tr><th>주차 / 엘리베이터</th><td>60대 (무료 일부 + 유료) / 현장 확인</td><th>가까운 역</th><td>건대입구역 480m, 성수역 780m</td></tr>
+    <tr><th>주요 병원</th><td>건국대학교병원 0.7km, 혜민병원 1.9km</td><th>가까운 산후조리원</th><td>광진아기맘미소 산후조리원 0.6km</td></tr>
+    <tr><th>아파트 1.5km</th><td>18,322세대</td><th>평균 매매가</th><td>5,169만원/평</td></tr>
+    <tr class="nego"><th>렌트프리 3~6개월</th><td><b>2.0억 ~ 3.9억원</b></td><th>광고상 협의 조건</th><td>렌트프리·핏아웃 최대 협의</td></tr>
+  </table>
+  <div class="two">
+    <div><h4>추천 이유</h4><ul><li>2026년 신축 첫 임대, 렌트프리·핏아웃 최대 협의 명시</li><li>성수사거리 코너: 성수·자양 신혼부부 수요권 (성동구 2025년 출생아 1,898명)</li><li>주차 60대, 층별 임대 가능해 2개 층(약 300평 안팎) 구성 협의 여지</li><li>5층 106평 (1.8억 / 1,590만, 제1종 근생)도 따로 나와 있음</li></ul></div>
+    <div><h4>체크 포인트</h4><ul class="risk"><li>광고 면적이 3개 층 통 349~465평이라 250평보다 큼. 층별 분할 조건부터 확인</li><li>임대료·관리비가 높은 편 (2~4층 통 월 6,510만 + 관리비 1,050만)</li><li>층별 용도 표기가 업무시설·근생으로 섞여 있어 대장 확인 필요</li></ul></div>
+  </div>
+  <div class="bk"><b>중개사</b> 삼정부동산중개 · <a href="tel:02-546-8289">02-546-8289</a>
+   <br><span class="oth">같은 매물: THE키움공인중개사사무소 02-463-1900 / 5층 106평: 여기공인중개사사무소 02-499-0010 · 010-5134-4900</span>
+   <br><a href="https://map.kakao.com/link/map/%EC%9E%90%EC%96%91%EB%8F%99%20%EC%A0%9C%EC%9D%BC%ED%83%80%EC%9B%8C%20%EC%8B%A0%EC%B6%95%20(%EC%84%B1%EC%88%98%EC%82%AC%EA%B1%B0%EB%A6%AC%2C%20%EC%A3%BC%EC%B0%A8%2060%EB%8C%80),37.5413882,127.0638791" target="_blank">지도</a> · <a href="https://map.kakao.com/link/roadview/37.5413882,127.0638791" target="_blank">로드뷰</a></div>
+</section>
+<section class="card">
+  <div class="ch"><span class="rk">7</span><div><h3>능동 군자타워 신축 (2026) 군자역 5번 출구 앞</h3><div class="sub">광진구 능동 220-6 · 천호대로 558 (15층, 엘리베이터 2대)</div></div></div>
+  <table class="spec">
+    <tr><th>층</th><td>2~4층 (3개 층) 등 여러 층 조합 / 총 15층</td><th>전용 / 공급</th><td><b>2~4층 180평 (광고 표기)</b> / 180평</td></tr>
+    <tr><th>보증금 / 월세</th><td><b>5.3억 / 2,970만</b></td><th>전용평당 월세</th><td>16.5만원 <small>(관리비 570만)</small></td></tr>
+    <tr><th>준공</th><td>2026.09 <span class="tag new">신축</span></td><th>건축물 용도</th><td>제1종 근린생활시설 <span class="tag new">산후조리원 용도</span></td></tr>
+    <tr><th>주차 / 엘리베이터</th><td>39대 (층별 무료 + 방문) / 2대</td><th>가까운 역</th><td>군자역 70m, 아차산역 970m</td></tr>
+    <tr><th>주요 병원</th><td>SC제일산부인과 1.4km, 건국대학교병원 1.9km</td><th>가까운 산후조리원</th><td>온 산후조리원 1.4km</td></tr>
+    <tr><th>아파트 1.5km</th><td>11,243세대</td><th>평균 매매가</th><td>3,454만원/평</td></tr>
+    <tr class="nego"><th>렌트프리 3~6개월</th><td><b>8,910만 ~ 1.8억원</b></td><th>광고상 협의 조건</th><td>렌트프리·핏아웃 적극 협의, 층별 또는 건물 전체 임대 협의</td></tr>
+  </table>
+  <div class="two">
+    <div><h4>추천 이유</h4><ul><li>2026년 신축, 제1종 근생, "병의원 최우수 빌딩"으로 홍보 중 (소아과 등 메디컬 입점 시 시너지)</li><li>군자역 70m 초역세권, 엘리베이터 2대</li><li>층별 또는 건물 전체 임대 협의 가능</li></ul></div>
+    <div><h4>체크 포인트</h4><ul class="risk"><li>층당 면적이 작아 250평이면 4~5개 층 필요. 층별 전용면적이 중개사마다 50~126평으로 달라 도면 확인 필수</li><li>전용평당 16만원대로 비싼 편, 천호대로변 소음</li></ul></div>
+  </div>
+  <div class="bk"><b>중개사</b> 주식회사시작부동산중개법인 · <a href="tel:02-6953-6899">02-6953-6899</a> · <a href="tel:010-4881-6899">010-4881-6899</a>
+   <br><span class="oth">5·12층: 바른공인중개사사무소 02-6949-1612 · 010-8346-9288 / 3층: 에이준리얼티공인중개사사무소 070-7633-3998 · 010-2998-3998 / 6~7층: 팀타이거부동산중개 02-516-8936 · 010-8000-9342</span>
+   <br><a href="https://map.kakao.com/link/map/%EB%8A%A5%EB%8F%99%20%EA%B5%B0%EC%9E%90%ED%83%80%EC%9B%8C%20%EC%8B%A0%EC%B6%95%20(2026)%20%EA%B5%B0%EC%9E%90%EC%97%AD%205%EB%B2%88%20%EC%B6%9C%EA%B5%AC%20%EC%95%9E,37.5566088,127.0799964" target="_blank">지도</a> · <a href="https://map.kakao.com/link/roadview/37.5566088,127.0799964" target="_blank">로드뷰</a></div>
+</section>
+<section class="card">
+  <div class="ch"><span class="rk">8</span><div><h3>건대입구역 1분 4층 통건물 (자양동 7-7)</h3><div class="sub">광진구 자양동 7-7 · 아차산로 236</div></div></div>
+  <table class="spec">
+    <tr><th>층</th><td>지상 1~4층 통임대 (+지하 1층) / 총 4층</td><th>전용 / 공급</th><td><b>지상 252평 (층당 63평) + 지하 106평</b> / 지하 포함 359평</td></tr>
+    <tr><th>보증금 / 월세</th><td><b>3억 / 3,000만</b></td><th>전용평당 월세</th><td>11.9만원 <small>(관리비 없음)</small></td></tr>
+    <tr><th>준공</th><td>1987.01</td><th>건축물 용도</th><td>제2종 근린생활시설 (제1종 표기 광고도 있음) <span class="tag mid">기재변경</span></td></tr>
+    <tr><th>주차 / 엘리베이터</th><td>8대 (앞마당 자주식) / 표기 없음 (확인)</td><th>가까운 역</th><td>건대입구역 40m, 자양역 970m</td></tr>
+    <tr><th>주요 병원</th><td>건국대학교병원 0.2km, 혜민병원 1.4km</td><th>가까운 산후조리원</th><td>광진아기맘미소 산후조리원 0.5km</td></tr>
+    <tr><th>아파트 1.5km</th><td>18,880세대</td><th>평균 매매가</th><td>5,140만원/평</td></tr>
+    <tr class="nego"><th>렌트프리 3~6개월</th><td><b>9,000만 ~ 1.8억원</b></td><th>광고상 협의 조건</th><td>통임대 환영 (건물 관리 중개사)</td></tr>
+  </table>
+  <div class="two">
+    <div><h4>추천 이유</h4><ul><li>건물 전체를 단독 사용: 1층 로비·상담실, 2~4층 산모실 구성 가능 (1층은 피난층이라 영유아실 배치 요건도 쉬움)</li><li>건국대병원 0.2km로 분만 병원과 가장 가까움</li><li>건대입구역 바로 앞, 앞마당 주차 8대</li></ul></div>
+    <div><h4>체크 포인트</h4><ul class="risk"><li>카카오맵에 "자양7구역 / 자양7특별계획구역 가로주택정비사업"이 같은 위치로 표시됨. 정비사업 구역이면 5~10년 장기 임대가 어려울 수 있어 최우선 확인</li><li>1987년 준공, 엘리베이터 여부 미표기</li><li>건대 상권 한가운데라 야간 소음·유동이 많음</li></ul></div>
+  </div>
+  <div class="bk"><b>중개사</b> 건대역해피부동산공인중개사사무소 · <a href="tel:02-464-1100">02-464-1100</a> · <a href="tel:010-8710-0513">010-8710-0513</a>
+   <br><span class="oth">같은 건물: 건대역다물공인 02-499-0001 · 010-5155-5667 (지하 106평 포함 표기) / (주)명인리얼티부동산중개법인 02-6959-7254</span>
+   <br><a href="https://map.kakao.com/link/map/%EA%B1%B4%EB%8C%80%EC%9E%85%EA%B5%AC%EC%97%AD%201%EB%B6%84%204%EC%B8%B5%20%ED%86%B5%EA%B1%B4%EB%AC%BC%20(%EC%9E%90%EC%96%91%EB%8F%99%207-7),37.5400448,127.0693941" target="_blank">지도</a> · <a href="https://map.kakao.com/link/roadview/37.5400448,127.0693941" target="_blank">로드뷰</a></div>
+</section>
+
+<h2 class="pb">예비 후보 (광진구 다른 동, 9~13위)</h2>
+<div class="box"><table class="alt"><tr><th>#</th><th>후보</th><th>층 / 전용</th><th>보증금 / 월세</th><th>준공 / 용도</th><th>1.5km 세대</th><th>가까운 역</th><th>메모</th><th>중개사</th></tr>
+<tr><td>9</td><td><b>광장동 워커힐 대로변 단독 통건물 (지하1~지상2층)</b><br><small>광진구 광장동 341-1 · 아차산로 639</small></td><td>B1~2층 / 356평</td><td>5억 / 2,800만</td><td>1997.01<br><small>제1종 근린생활시설</small></td><td>11,493</td><td><small>광나루역 640m</small></td><td><small>제1종 근생(산후조리원 용도 그대로), 지상 1층 120평 + 2층 160평 = 280평, 단독 건물. 아차산 기슭 조용한 입지, 광장동 평균 매매가 5,860만원/평. 같은 건물을 광개토공인중개사는 3억 / 2,800만으로 표기</small></td><td><small>(주)명인리얼티부동산중개법인<br>02-6959-7254 · 010-9214-2627</small></td></tr>
+<tr><td>10</td><td><b>구의동 금성빌딩 3층 한 층 198평 (강변역)</b><br><small>광진구 구의동 594-4 · 구의강변로 46</small></td><td>3층 / 198평</td><td>2.5억 / 2,000만</td><td>1994.05<br><small>업무시설 (2종 근생 표기 광고도 있음)</small></td><td>20,611</td><td><small>강변역 230m</small></td><td><small>층 전체 단독, 리모델링 완료, 엘리베이터 1대, 주차 27대, 강변역 230m. 이 광고는 "월세+관리비 합계 2,000만"으로 표기해 다른 광고와 조건 비교 필요. 예그리나 산후조리원 0.6km</small></td><td><small>정선부동산중개<br>02-6242-4000 · 010-2683-8100</small></td></tr>
+<tr><td>11</td><td><b>중곡동 동일로 대로변 통건물 (지하1~4층)</b><br><small>광진구 중곡동 236-7 · 동일로 411</small></td><td>B1~4층 / 251평</td><td>1억 / 900만</td><td>1979.12 (2009 리모델링)<br><small>제2종 근린생활시설</small></td><td>21,028</td><td><small>중곡역 580m</small></td><td><small>후보 중 가장 저렴 (전용평당 3.6만원). 층당 약 49평 × 5개 층, 화물용 엘리베이터만 표기 → 승객용 설치 가능 여부 확인. 중곡역 590m</small></td><td><small>The두꺼비부동산공인중개사사무소<br>02-456-5989 · 010-9874-9549</small></td></tr>
+<tr><td>12</td><td><b>군자동 정일빌딩 통건물 (군자역 200m)</b><br><small>광진구 군자동 473-25 · 천호대로 534</small></td><td>B1~4층 / 약 323평</td><td>6억 / 3,500만</td><td>1983.12<br><small>제2종 근린생활시설</small></td><td>11,202</td><td><small>군자역 200m</small></td><td><small>각 층 약 70평, 옆 건물에 200평 규모 병원 입점. 리모델링·1층 테라스·옥상 활용 협의. 엘리베이터는 광고마다 있음/없음이 달라 확인 필요</small></td><td><small>스테이공인중개사사무소<br>02-6672-2600 · 010-7529-4258</small></td></tr>
+<tr><td>13</td><td><b>어린이대공원 정문 옆 토지임대·신축형</b><br><small>광진구 능동 315-13 · 능동로 248</small></td><td>1~2층 / 약 350~384평 (가설 건물)</td><td>연세 7.5억 (보증금 없음)</td><td>미등기 (모델하우스)<br><small>판매시설</small></td><td>-</td><td><small>어린이대공원역 530m</small></td><td><small>대지 약 414평, 무료 주차 20대. 토지임대 후 임차인 신축 가능 조건이라 산후조리원 전용 건물을 새로 짓는 경우만 검토 대상</small></td><td><small>광개토부동산중개법인(주)<br>02-425-4888</small></td></tr>
+</table></div>
+
+<h2>산후조리원 입점 체크리스트</h2>
+<div class="box"><ul class="note">
+<li><b>건축물 용도</b>: 산후조리원은 제1종 근린생활시설입니다. 1·5·7번은 이미 제1종 근생이라 가장 수월합니다. 제2종 근생(2·4·8번)은 같은 근린생활시설군이라 대장 기재변경으로 처리되는 경우가 많습니다. 업무시설(3번 범천타워, 예비 10번)은 상위 시설군으로 바꾸는 것이라 허가가 필요하니 구청 건축과에 먼저 확인하세요. 용도가 바뀌면 주차 기준도 다시 맞춰야 합니다.</li>
+<li><b>층 요건</b>: 임산부실·영유아실은 1층이 원칙이고, 2층 이상은 피난층이거나 층마다 방화구획된 대피공간, 노대(발코니·테라스), 경사로, 연결통로 중 하나를 갖추면 됩니다 (모자보건법 시행규칙 별표3, 2018년 이후 신고분부터 적용). 발코니(1번 K&S빌딩)·테라스(5번 호연빌딩)가 있으면 유리하고, 통건물(8번, 예비 9번)은 1층에 둘 수 있습니다.</li>
+<li><b>시설 기준</b>: 임산부실은 1인실 6.3㎡ 이상(다인실은 1인당 4.3㎡), 영유아실은 공용면적을 빼고 1명당 1.7㎡ 이상입니다. 투명 벽체로 나눈 사전관찰실, 조리실·식품저장실, 세탁실(위탁하면 생략 가능), 방문객 손 씻기 시설, 좌욕 시설이 필요하고, 다른 업종과 같이 쓸 수 없습니다.</li>
+<li><b>소방</b>: 산후조리업은 다중이용업소라 지상 1층이 아니면 간이스프링클러를 달아야 하고, 피난기구·비상구 등을 갖춰 소방서의 안전시설등 완비증명서를 받아야 합니다.</li>
+<li><b>설비</b>: 객실마다 욕실이 들어가므로 급탕·급수·배수 용량, 전기 증설, 환기, 조리실 배기 경로, 엘리베이터 크기(유모차·침대), 대로변 소음(창호 차음)을 건물주와 확인하세요.</li>
+<li><b>면적 표기</b>: 연층 매물은 광고 면적이 여러 층 합계입니다. 3번은 층당 약 112평, 1·4번은 층당 74~75평, 5번은 층당 약 73평, 7번은 층별 표기가 광고마다 달라 도면 확인이 필요합니다.</li>
+<li>가격·공실 여부는 2026.11.20 광고 기준이며, 같은 호실을 중개사마다 다른 조건으로 올린 경우가 있습니다.</li>
+</ul>
+<p class="authorline"><b>작성자: 조우석 팀장 · <a href="tel:010-2508-9369">010-2508-9369</a></b> (작성일 2026.11.20)</p></div>
+</div>
+<script>
+(function(){ if(!window.L) return; const D={"top":[{"r":1,"t":"자양동 K&S빌딩 7~9층 연층 (구의역 400m)","lat":37.5395236,"lon":127.0828573},{"r":2,"t":"화양동 KCC파크타운 2층 한 층 255평 (어린이대공원역)","lat":37.5465827,"lon":127.0750378},{"r":3,"t":"능동 범천타워 6~7층 연층 (군자역 200m, 주차 89대)","lat":37.5559979,"lon":127.0812373},{"r":4,"t":"능동 청화빌딩 2~4층 통임대 (아차산역 300m)","lat":37.5538799,"lon":127.0869409},{"r":5,"t":"화양동 호연빌딩 신축 (2024) 층마다 테라스","lat":37.5464113,"lon":127.0740359},{"r":6,"t":"자양동 제일타워 신축 (성수사거리, 주차 60대)","lat":37.5413882,"lon":127.0638791},{"r":7,"t":"능동 군자타워 신축 (2026) 군자역 5번 출구 앞","lat":37.5566088,"lon":127.0799964},{"r":8,"t":"건대입구역 1분 4층 통건물 (자양동 7-7)","lat":37.5400448,"lon":127.0693941}],"alt":[{"r":9,"t":"광장동 워커힐 대로변 단독 통건물 (지하1~지상2층)","lat":37.5497843,"lon":127.1080166},{"r":10,"t":"구의동 금성빌딩 3층 한 층 198평 (강변역)","lat":37.5349152,"lon":127.0921417},{"r":11,"t":"중곡동 동일로 대로변 통건물 (지하1~4층)","lat":37.5673175,"lon":127.077918},{"r":12,"t":"군자동 정일빌딩 통건물 (군자역 200m)","lat":37.5576256,"lon":127.0773509},{"r":13,"t":"어린이대공원 정문 옆 토지임대·신축형","lat":37.5522265,"lon":127.0772141}],"sj":[{"n":"광진아기맘미소 산후조리원","lat":37.53608364,"lon":127.06602184},{"n":"온 산후조리원","lat":37.54452716,"lon":127.0853112},{"n":"예그리나 산후조리원","lat":37.54029274,"lon":127.08979392}],"hs":[{"n":"건국대학교병원","lat":37.54064185,"lon":127.07209753},{"n":"혜민병원","lat":37.53539675,"lon":127.08360139},{"n":"SC제일산부인과(분만)","lat":37.54471882,"lon":127.08566447}]};
+ const m=L.map('map',{zoomControl:true,attributionControl:false});
+ L.tileLayer('https://mt{s}.google.com/vt/lyrs=m&hl=ko&x={x}&y={y}&z={z}',{subdomains:'0123',maxZoom:19}).addTo(m);
+ const b=[];
+ const off={2:[-4,12],5:[28,12],7:[24,12],3:[0,12]};
+ const num=(r,top)=>L.divIcon({className:'',html:'<div style="width:24px;height:24px;border-radius:50%;background:'+(top?'#13213c':'#8a93a6')+';color:'+(top?'#e8b04a':'#fff')+';font-weight:800;font-size:12px;display:flex;align-items:center;justify-content:center;border:2px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4)">'+r+'</div>',iconSize:[24,24],iconAnchor:(off[r]||[12,12])});
+ D.sj.forEach(s=>{ L.circleMarker([s.lat,s.lon],{radius:7,color:'#fff',weight:2,fillColor:'#d63031',fillOpacity:1}).bindTooltip(s.n,{permanent:true,direction:'right',className:''}).addTo(m); b.push([s.lat,s.lon]); });
+ D.hs.forEach(s=>{ L.circleMarker([s.lat,s.lon],{radius:7,color:'#fff',weight:2,fillColor:'#1b7a3d',fillOpacity:1}).bindTooltip(s.n,{permanent:true,direction:'left'}).addTo(m); b.push([s.lat,s.lon]); });
+ D.alt.forEach(c=>{ L.marker([c.lat,c.lon],{icon:num(c.r,false),zIndexOffset:500}).bindTooltip(c.r+'. '+c.t).addTo(m); b.push([c.lat,c.lon]); });
+ D.top.forEach(c=>{ L.marker([c.lat,c.lon],{icon:num(c.r,true),zIndexOffset:1000}).bindTooltip(c.r+'. '+c.t).addTo(m); b.push([c.lat,c.lon]); });
+ m.fitBounds(b,{padding:[18,18]});
+})();
+</script></body></html>
